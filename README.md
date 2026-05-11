@@ -3,29 +3,7 @@
 Implementación de servicios distribuidos usando **XML-RPC** y **gRPC** en Python.  
 Incluye dos ejercicios: calculadora aritmética y conversor de temperaturas.
 
----
-
-## Estructura
-
-```
-├── xmlrpc/
-│   ├── calculadora_servidor.py
-│   ├── calculadora_cliente.py
-│   ├── temperatura_servidor.py
-│   └── temperatura_cliente.py
-│
-└── grpc/
-    ├── calculadora.proto
-    ├── calculadora_servidor.py
-    ├── calculadora_cliente.py
-    ├── temperatura.proto
-    ├── temperatura_servidor.py
-    └── temperatura_cliente.py
-```
-
----
-
-## Requisitos
+## Requisitos antes de ejecutar el codigo
 
 ```bash
 pip install grpcio grpcio-tools
