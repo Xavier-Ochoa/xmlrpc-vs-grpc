@@ -34,7 +34,7 @@ xmlrpc-vs-grpc/
 
 ---
 
-## Requisitos
+## Requisitos antes de ejecutar el codigo gRCP
 
 ```bash
 pip install grpcio grpcio-tools
@@ -44,65 +44,9 @@ pip install grpcio grpcio-tools
 
 ---
 
-## Uso
-
-### Ejercicio 1 — Calculadora
-
-**XML-RPC** (puerto 8000)
-```bash
-# Terminal 1
-python "ejercicio 1/calc xml/calculadora_servidor.py"
-
-# Terminal 2
-python "ejercicio 1/calc xml/calculadora_cliente.py"
-```
-
-**gRPC** (puerto 5000)
-```bash
-# Terminal 1
-python "ejercicio 1/calc_gRPC/calculadora_servidor.py"
-
-# Terminal 2
-python "ejercicio 1/calc_gRPC/calculadora_cliente.py"
-```
-
----
-
-### Ejercicio 2 — Conversor de Temperaturas
-
-**XML-RPC** (puerto 8001)
-```bash
-# Terminal 1
-python "ejercicio 2/temp xml/temperatura_servidor.py"
-
-# Terminal 2
-python "ejercicio 2/temp xml/temperatura_cliente.py"
-```
-
-**gRPC** (puerto 5001)
-```bash
-# Terminal 1
-python "ejercicio 2/temp_gRPC/temperatura_servidor.py"
-
-# Terminal 2
-python "ejercicio 2/temp_gRPC/temperatura_cliente.py"
-```
-
----
-
-### Recompilar archivos `.proto` (opcional)
-
-Solo necesario si se modifica algún `.proto`:
+### Recompilar archivos `.proto` 
 
 ```bash
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. calculadora.proto
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. temperatura.proto
 ```
-
----
-
-## Tecnologías
-
-- Python 3
-- XML-RPC — stdlib
-- gRPC + Protocol Buffers
